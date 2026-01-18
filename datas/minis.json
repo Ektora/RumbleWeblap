@@ -1,0 +1,317 @@
+{
+    "minis":[
+        {
+            "id":0,
+            "name":"Abomination",
+            "cost":0,
+            "main-family": "undead",
+            "second-family": "none"
+        },
+        {
+            "id":0,
+            "name":"Ancient of War",
+            "cost":0,
+            "main-family": "cenarion",
+            "second-family": "none"
+        },
+        {
+            "id":0,
+            "name":"Angry Chickens",
+            "cost":0,
+            "main-family": "beast",
+            "second-family": "none"
+        },
+        {
+            "id":0,
+            "name":"Anubarak",
+            "cost":0,
+            "main-family": "undead",
+            "second-family": "beast"
+        },
+        {
+            "id":0,
+            "name":"Arcane Blast",
+            "cost":0,
+            "main-family": "alliance",
+            "second-family": "none"
+        },
+        {
+            "id":0,
+            "name":"Arthas Menethil",
+            "cost":0,
+            "main-family": "alliance",
+            "second-family": "undead"
+        },
+        {
+            "id":0,
+            "name":"Banshee",
+            "cost":0,
+            "main-family": "undead",
+            "second-family": "none"
+        },
+        {
+            "name":"Baron Rivendare",
+            "cost":0,
+            "main-family": "undead",
+            "second-family": "none"
+        },
+        {
+            "name":"Bat rider",
+            "cost":0,
+            "main-family": "horde",
+            "second-family": "none"
+        },
+        {
+            "name":"Blizzard",
+            "cost":0,
+            "main-family": "alliance",
+            "second-family": "none"
+        },
+        {
+            "name":"Bloodmage Thalnos",
+            "cost":0,
+            "main-family": "undead",
+            "second-family": "none"
+        },
+        {
+            "name":"Bog beast",
+            "cost":0,
+            "main-family": "cenarion",
+            "second-family": "none"
+        },
+        {
+            "name":"Cairne Bloodhoof",
+            "cost":0,
+            "main-family": "horde",
+            "second-family": "none"
+        },
+        {
+            "name":"Cenarius",
+            "cost":0,
+            "main-family": "cenarion",
+            "second-family": "none"
+        },
+        {
+            "name":"Chain lightning",
+            "cost":0,
+            "main-family": "horde",
+            "second-family": "none"
+        },
+        {
+            "name":"Chain lightning",
+            "cost":0,
+            "main-family": "horde",
+            "second-family": "none"
+        },
+        {
+            "name":"Chain lightning",
+            "cost":0,
+            "main-family": "horde",
+            "second-family": "none"
+        },
+        {
+            "name":"Chain lightning",
+            "cost":0,
+            "main-family": "horde",
+            "second-family": "none"
+        },
+        {
+            "name":"Chain lightning",
+            "cost":0,
+            "main-family": "horde",
+            "second-family": "none"
+        },
+        {
+            "name":"Chain lightning",
+            "cost":0,
+            "main-family": "horde",
+            "second-family": "none"
+        },
+        {
+            "name":"Chain lightning",
+            "cost":0,
+            "main-family": "horde",
+            "second-family": "none"
+        },
+        {
+            "name":"Chain lightning",
+            "cost":0,
+            "main-family": "horde",
+            "second-family": "none"
+        },
+        {
+            "name":"Chain lightning",
+            "cost":0,
+            "main-family": "horde",
+            "second-family": "none"
+        },
+        {
+            "name":"Chain lightning",
+            "cost":0,
+            "main-family": "horde",
+            "second-family": "none"
+        },
+        {
+            "name":"Chain lightning",
+            "cost":0,
+            "main-family": "horde",
+            "second-family": "none"
+        },
+        {
+            "name":"Chain lightning",
+            "cost":0,
+            "main-family": "horde",
+            "second-family": "none"
+        },
+        {
+            "name":"Chain lightning",
+            "cost":0,
+            "main-family": "horde",
+            "second-family": "none"
+        },
+        {
+            "name":"Chain lightning",
+            "cost":0,
+            "main-family": "horde",
+            "second-family": "none"
+        },
+        {
+            "name":"Chain lightning",
+            "cost":0,
+            "main-family": "horde",
+            "second-family": "none"
+        },
+        {
+            "name":"Chain lightning",
+            "cost":0,
+            "main-family": "horde",
+            "second-family": "none"
+        },
+        {
+            "name":"Chain lightning",
+            "cost":0,
+            "main-family": "horde",
+            "second-family": "none"
+        },
+        {
+            "name":"Chain lightning",
+            "cost":0,
+            "main-family": "horde",
+            "second-family": "none"
+        },
+        {
+            "name":"Chain lightning",
+            "cost":0,
+            "main-family": "horde",
+            "second-family": "none"
+        },
+        {
+            "name":"Chain lightning",
+            "cost":0,
+            "main-family": "horde",
+            "second-family": "none"
+        },
+        {
+            "name":"Chain lightning",
+            "cost":0,
+            "main-family": "horde",
+            "second-family": "none"
+        },
+        {
+            "name":"Chain lightning",
+            "cost":0,
+            "main-family": "horde",
+            "second-family": "none"
+        },
+        {
+            "name":"Chain lightning",
+            "cost":0,
+            "main-family": "horde",
+            "second-family": "none"
+        },
+        {
+            "name":"Chain lightning",
+            "cost":0,
+            "main-family": "horde",
+            "second-family": "none"
+        },
+        {
+            "name":"Chain lightning",
+            "cost":0,
+            "main-family": "horde",
+            "second-family": "none"
+        },
+        {
+            "name":"Chain lightning",
+            "cost":0,
+            "main-family": "horde",
+            "second-family": "none"
+        },
+        {
+            "name":"Chain lightning",
+            "cost":0,
+            "main-family": "horde",
+            "second-family": "none"
+        },
+        {
+            "name":"Chain lightning",
+            "cost":0,
+            "main-family": "horde",
+            "second-family": "none"
+        },
+        {
+            "name":"Chain lightning",
+            "cost":0,
+            "main-family": "horde",
+            "second-family": "none"
+        },
+        {
+            "name":"Chain lightning",
+            "cost":0,
+            "main-family": "horde",
+            "second-family": "none"
+        },
+        {
+            "name":"Chain lightning",
+            "cost":0,
+            "main-family": "horde",
+            "second-family": "none"
+        },
+        {
+            "name":"Chain lightning",
+            "cost":0,
+            "main-family": "horde",
+            "second-family": "none"
+        },
+        {
+            "name":"Chain lightning",
+            "cost":0,
+            "main-family": "horde",
+            "second-family": "none"
+        },
+        {
+            "name":"Chain lightning",
+            "cost":0,
+            "main-family": "horde",
+            "second-family": "none"
+        },
+        {
+            "name":"Chain lightning",
+            "cost":0,
+            "main-family": "horde",
+            "second-family": "none"
+        },
+        {
+            "name":"Chain lightning",
+            "cost":0,
+            "main-family": "horde",
+            "second-family": "none"
+        },
+        {
+            "name":"Chain lightning",
+            "cost":0,
+            "main-family": "horde",
+            "second-family": "none"
+        }
+    ]
+}

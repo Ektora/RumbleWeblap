@@ -1,7 +1,35 @@
+:root{
+    --page-bg-color: #0B1220; 
+    --page-panels-color: #111C2E;
+    --page-panels-border: rgba(255,255,255,0.08);
+    --main-text-color: #E6EDF7;
+    --secondary-text-color:#A9B4C7;
+    --alliance-color: rgb(60, 74, 188);
+    --beast-color: rgb(179, 120, 61);
+    --blackrock-color: rgb(73, 69, 86);
+    --cenarion-color: rgb(43, 116, 100);
+    --horde-color: rgb(199, 57, 65);
+    --undead-color: #5A359A;
+    --neutral-color: #75838F;
+}
+
+body{
+    background-color: var(--page-bg-color);
+}
+
+#minisListDisplay{
+    background-color: var(--page-panels-color);
+    color: var(--main-text-color);
+}
+
+#minisListSearch{
+    background-color: var(--page-panels-color);
+}
+
 .mini-card{
     max-width: 300px;
     border: 1px solid black;
-    background-color: white; 
+    background-color: var(--page-panels-color); 
 }
 
 .mini-list-image{
@@ -15,7 +43,7 @@
 @media screen and (min-width: 576px) {
    .mini-card{
     width: 160px;
-    height: 280px;
+    height: 270px;
    }
 
    .mini-list-stack{
@@ -45,7 +73,81 @@
             transform: translateX(-50%);
     }
 
+    .mini-card .card-body{
+        height: 72px;
+    }
+}
+
+
+@media screen and (min-width: 1400px) {
+   .mini-card{
+    width: 185px;
+    height: 270px;
+   }
+
+   .mini-list-stack{
+    position: relative;
+    width: 155px;
+    height: 180px;
+    margin: 0 auto;
+   }
+
+   .mini-list-image{
+    width: 150px;
+    max-height: 150px;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%) translateY(-20%);
+    z-index: 2;
+    }
+
+    .mini-list-base{
+        display: inline;
+         position: absolute;
+            left: 50%;
+            bottom: 0;
+            width: 150px;
+            height: auto;
+            z-index: 1;
+            transform: translateX(-50%);
+    }
+
+    .mini-card .card-body{
+        height: 72px;
+    }
 }
 
 
 
+
+.alliance-gradient{
+    background: linear-gradient(135deg,rgba(60, 74, 188, 0.2) 0%, rgba(60, 74, 188, 0.4) 100%);
+}
+
+.alliance-undead-gradient{
+    background: rgb(60, 74, 188);
+    background: linear-gradient(135deg,rgba(60, 74, 188, 0.2) 0%, rgba(60, 74, 188, 0.4) 33% , rgba(90, 53, 154, 0.2) 66%, rgba(90, 53, 154, 0.4) 100%);
+}
+
+.beast-gradient{
+    background: linear-gradient(135deg,rgba(179, 120, 61, 0.2) 0%, rgba(179, 120, 61, 0.4) 100%);
+}
+.blackrock-gradient{
+    background: linear-gradient(135deg,rgba(73, 69, 86, 0.2) 0%, rgba(73, 69, 86, 0.8) 100%);
+}
+.cenarion-gradient{
+    background: linear-gradient(135deg,rgba(43, 116, 100, 0.2) 0%, rgba(43, 116, 100, 0.4) 100%);
+}
+.horde-gradient{
+    background: linear-gradient(135deg,rgba(199, 57, 65, 0.2) 0%, rgba(199, 57, 65, 0.4) 100%);
+}
+.undead-gradient{
+    background: #5a359a;
+    background: linear-gradient(135deg,rgba(90, 53, 154, 0.2) 0%, rgba(90, 53, 154, 0.4) 100%);
+}
+
+.undead-beast-gradient{
+    background: #5a359a;
+    background: linear-gradient(135deg,rgba(90, 53, 154, 0.2) 0%, rgba(90, 53, 154, 0.4) 33% , rgba(179, 120, 61, 0.2) 66%, rgba(179, 120, 61, 0.4) 100%);
+}
