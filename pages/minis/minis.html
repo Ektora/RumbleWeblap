@@ -14,18 +14,24 @@
 <body>
     <div class="container">
         <div class="row">
+            <div id="menu-slot"></div>
             <div id="minisListDisplay"
                 class="col-md-9 order-2 order-md-1">
                 <div class="row pt-1 row-cols-1 row-cols-sm-3 row-cols-lg-4 row-cols-xl-5 g-2" id="miniCards">
-                    <!--
                     <div class="col">
-                        <div class="card mini-card m-auto py-2 undead-gradient">
+                        <div class="card mini-card position-relative m-auto py-2 undead-gradient">
                             <div class="row g-0">
-                                <div class="col-5 col-sm-12 mini-list-stack">
-                                    <img src="../../src/images/minis/abomination.png"
-                                        class="mini-list-image" alt="...">
+                                <div class="col-5 col-sm-12 position-relative mini-list-stack">
+                                    <img src="../../src/images/icons/Undead.png" class="mini-family-image position-absolute" alt="">
+                                    <img src="../../src/images/icons/troop.png" class="mini-type-image position-absolute" alt="">
+                                    <img src="../../src/images/minis/abomination.png" class="mini-list-image" alt="...">
                                     <img src="../../src/images/statue/Statue_Base_Undead_Pose.png"
-                                        class="mini-list-base" alt="...">
+                                        class="mini-list-base d-none d-md-inline position-absolute start-50 bottom-0 translate-middle-x" alt="...">
+                                    <div class="mini-cost-container position-absolute bottom-0 start-50 translate-middle">
+                                        <img src="../../src/images/icons/gold.png" class="mini-cost-image" alt="...">
+                                        <!--<span class="position-absolute d-inline-flex align-items-center top-50 start-50 translate-middle text-white fw-bold mini-cost-value">3</span>-->
+                                        <img src="../../src/images/icons/value_6.png" class="mini-cost-image-value position-absolute top-50 start-50 translate-middle" alt="...">
+                                    </div>
                                 </div>
                                 <div class="col-7 col-sm-12">
                                 <div class="card-body d-flex justify-content-center align-content-center p-0">
@@ -35,7 +41,7 @@
                             </div>
                         </div>
                     </div>
-
+                    <!--
                     <div class="col">
                         <div class="card mini-card m-auto py-2 cenarion-gradient">
                             <div class="row g-0">
@@ -188,4 +194,5 @@
     </div>
 
     <script src="../../js/main.js"></script>
+    <script src="../../js/menu.js"></script>
 </body>

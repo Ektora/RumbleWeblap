@@ -23,11 +23,18 @@ function loadMiniToHtml(minis){
         
        miniElement = 
        `<div class="col">
-            <div class="card mini-card m-auto py-2 undead-gradient">
+            <div class="card mini-card position-relative m-auto py-2 ${familyNameToGradient(element["main-family"],element["second-family"])}-gradient">
                 <div class="row g-0">
-                    <div class="col-5 col-sm-12 mini-list-stack">
-                       <img src="../../src/images/minis/${nameToImageName(element.name)}.png" class="mini-list-image" alt="...">
-                        <img src="../../src/images/statue/Statue_Base_Undead_Pose.png" class="mini-list-base" alt="...">
+                    <div class="col-5 col-sm-12 position-relative mini-list-stack">
+                        <img src="../../src/images/icons/${familyNameToFamilyIcon(element["main-family"],element["second-family"])}.png" class="mini-family-image position-absolute" alt="">
+                        <img src="../../src/images/icons/${element.type}.png" class="mini-type-image position-absolute" alt="">
+                        <img src="../../src/images/minis/${nameToImageName(element.name)}.png" class="mini-list-image" alt="...">
+                        <img src="../../src/images/statue/${familyNameToStatueName(element["main-family"],element["second-family"])}.png" class="mini-list-base d-none d-md-inline position-absolute start-50 bottom-0 translate-middle-x" alt="...">
+                        <div class="mini-cost-container position-absolute bottom-0 start-50 translate-middle">
+                            <img src="../../src/images/icons/gold.png" class="mini-cost-image" alt="...">
+                            <!--<span class="position-absolute d-inline-flex align-items-center top-50 start-50 translate-middle text-white fw-bold mini-cost-value">3</span>-->
+                                        <img src="../../src/images/icons/value_${element.cost}.png" class="mini-cost-image-value position-absolute top-50 start-50 translate-middle" alt="...">
+                        </div>
                     </div>
                     <div class="col-7 col-sm-12">
                         <div class="card-body d-flex justify-content-center align-content-center p-0">
@@ -38,8 +45,9 @@ function loadMiniToHtml(minis){
             </div>
         </div>`;
         miniElements = miniElements + "\n\n" + miniElement;
+        //console.log(element.id + " " + familyNameToStatueName(element["main-family"],element["second-family"]));
     });
-    miniCardsElement.innerHTML = miniElements;
+    miniCardsElement.innerHTML = miniCardsElement.innerHTML + miniElements;
 }
 
 function nameToImageName(miniName){
@@ -48,5 +56,46 @@ function nameToImageName(miniName){
 }
 
 function familyNameToStatueName(mainFamily,secondFamily){
+    let statueBaseImageName;
+    let mainFamilyHelper;
+    let secondFamilyHelper;
+    if(mainFamily == "" || mainFamily == null){
+        statueBaseImageName = "Statue_Base_Neutral_Pose";
+    }
+    else if(secondFamily == "none"){
+        mainFamilyHelper = mainFamily.slice(0,1).toUpperCase() + mainFamily.slice(1,mainFamily.length)
+        statueBaseImageName = `Statue_Base_${mainFamilyHelper}_Pose`;
+    }
+    else{
+        mainFamilyHelper = mainFamily.slice(0,1).toUpperCase() + mainFamily.slice(1,mainFamily.length);
+        secondFamilyHelper = secondFamily.slice(0,1).toUpperCase() + secondFamily.slice(1,mainFamily.length)
+        statueBaseImageName = `Statue_Base_Split_${mainFamilyHelper}_${secondFamilyHelper}_Pose`;
+    }
+    return statueBaseImageName;
+}
 
+function familyNameToGradient(mainFamily,secondFamily){
+    let gradient = "";
+    if(mainFamily == "" || mainFamily == null){
+        gradient = "neutral";
+    }
+    gradient +=  mainFamily;
+
+    if(secondFamily != "none"){
+        gradient = gradient + "-" + secondFamily;
+    }
+    return gradient;
+}
+
+function familyNameToFamilyIcon(mainFamily,secondFamily){
+    let familyIcon = "";
+    if(mainFamily == "" || mainFamily == null){
+        familyIcon = "none";
+    }
+    familyIcon +=  mainFamily;
+
+    if(secondFamily != "none"){
+        familyIcon += secondFamily;
+    }
+    return familyIcon;
 }

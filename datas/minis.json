@@ -3,312 +3,400 @@
         {
             "id":0,
             "name":"Abomination",
-            "cost":0,
+            "cost":6,
+            "type":"troop",
             "main-family": "undead",
             "second-family": "none"
         },
         {
-            "id":0,
+            "id":1,
             "name":"Ancient of War",
             "cost":0,
+            "type":"troop",
             "main-family": "cenarion",
             "second-family": "none"
         },
         {
-            "id":0,
+            "id":2,
             "name":"Angry Chickens",
-            "cost":0,
+            "cost":2,
+            "type":"troop",
             "main-family": "beast",
             "second-family": "none"
         },
         {
-            "id":0,
+            "id":3,
             "name":"Anubarak",
-            "cost":0,
+            "cost":6,
+            "type":"leader",
             "main-family": "undead",
             "second-family": "beast"
         },
         {
-            "id":0,
+            "id":4,
             "name":"Arcane Blast",
-            "cost":0,
+            "cost":1,
+            "type":"spell",
             "main-family": "alliance",
             "second-family": "none"
         },
         {
-            "id":0,
+            "id":5,
             "name":"Arthas Menethil",
-            "cost":0,
+            "cost":5,
+            "type":"leader",
             "main-family": "alliance",
             "second-family": "undead"
         },
         {
-            "id":0,
+            "id":6,
             "name":"Banshee",
-            "cost":0,
+            "cost":4,
+            "type":"troop",
             "main-family": "undead",
             "second-family": "none"
         },
         {
+            "id":7,
             "name":"Baron Rivendare",
-            "cost":0,
+            "cost":4,
+            "type":"leader",
             "main-family": "undead",
             "second-family": "none"
         },
         {
+            "id":8,
             "name":"Bat rider",
-            "cost":0,
+            "cost":2,
+            "type":"troop",
             "main-family": "horde",
             "second-family": "none"
         },
         {
+            "id":9,
             "name":"Blizzard",
-            "cost":0,
+            "cost":4,
+            "type":"spell",
             "main-family": "alliance",
             "second-family": "none"
         },
         {
+            "id":10,
             "name":"Bloodmage Thalnos",
-            "cost":0,
+            "cost":4,
+            "type":"leader",
             "main-family": "undead",
             "second-family": "none"
         },
         {
-            "name":"Bog beast",
-            "cost":0,
+            "id":11,
+            "name":"Bog Beast",
+            "cost":3,
+            "type":"troop",
             "main-family": "cenarion",
             "second-family": "none"
         },
         {
+            "id":12,
             "name":"Cairne Bloodhoof",
-            "cost":0,
+            "cost":5,
+            "type":"leader",
             "main-family": "horde",
             "second-family": "none"
         },
         {
+            "id":13,
             "name":"Cenarius",
-            "cost":0,
+            "cost":5,
+            "type":"leader",
             "main-family": "cenarion",
             "second-family": "none"
         },
         {
+            "id":14,
+            "name":"Chain lightning",
+            "cost":2,
+            "type":"spell",
+            "main-family": "horde",
+            "second-family": "none"
+        },
+        {
+            "id":15,
+            "name":"Charlga Razorflank",
+            "cost":1,
+            "type":"leader",
+            "main-family": "beast",
+            "second-family": "none"
+        },
+        {
+            "id":16,
+            "name":"Cheat Death",
+            "cost":3,
+            "type":"spell",
+            "main-family": "undead",
+            "second-family": "none"
+        },
+        {
+            "id":17,
+            "name":"Chimaera",
+            "cost":5,
+            "type":"troop",
+            "main-family": "beast",
+            "second-family": "none"
+        },
+        {
+            "id":18,
+            "name":"Core Hounds",
+            "cost":6,
+            "type":"troop",
+            "main-family": "blackrock",
+            "second-family": "none"
+        },
+        {
+            "id":19,
+            "name":"Dark Iron Miner",
+            "cost":2,
+            "type":"troop",
+            "main-family": "blackrock",
+            "second-family": "none"
+        },
+        {
+            "id":20,
+            "name":"Darkspear troll",
+            "cost":0,
+            "type":"troop",
+            "main-family": "horde",
+            "second-family": "none"
+        },
+        {
+            "id":21,
+            "name":"Deep breath",
+            "cost":0,
+            "type":"spell",
+            "main-family": "horde",
+            "second-family": "none"
+        },
+        {
+            "id":22,
+            "name":"Defias bandits",
+            "cost":0,
+            "type":"troop",
+            "main-family": "horde",
+            "second-family": "none"
+        },
+        {
+            "id":23,
+            "name":"Dire batlings",
+            "cost":0,
+            "type":"troop",
+            "main-family": "horde",
+            "second-family": "none"
+        },
+        {
+            "id":24,
+            "name":"Drake",
+            "cost":0,
+            "type":"troop",
+            "main-family": "horde",
+            "second-family": "none"
+        },
+        {
+            "id":25,
+            "name":"Druid of the claw",
+            "cost":0,
+            "type":"troop",
+            "main-family": "cenarion",
+            "second-family": "none"
+        },
+        {
+            "id":26,
+            "name":"Dryad",
+            "cost":0,
+            "type":"troop",
+            "main-family": "horde",
+            "second-family": "none"
+        },
+        {
+            "id":27,
+            "name":"Earth and Moon",
+            "cost":0,
+            "type":"spell",
+            "main-family": "horde",
+            "second-family": "none"
+        },
+        {
+            "id":28,
+            "name":"Earth elemental",
+            "cost":0,
+            "type":"troop",
+            "main-family": "horde",
+            "second-family": "none"
+        },
+        {
+            "id":29,
+            "name":"Eclipse",
+            "cost":0,
+            "type":"spell",
+            "main-family": "horde",
+            "second-family": "none"
+        },
+        {
+            "id":30,
+            "name":"Emperor Thaurissan",
+            "cost":0,
+            "type":"leader",
+            "main-family": "horde",
+            "second-family": "none"
+        },
+        {
+            "id":31,
+            "name":"Execute",
+            "cost":0,
+            "type":"spell",
+            "main-family": "horde",
+            "second-family": "none"
+        },
+        {
+            "id":32,
+            "name":"Faerie dragon",
+            "cost":0,
+            "type":"troop",
+            "main-family": "horde",
+            "second-family": "none"
+        },
+        {
+            "id":33,
+            "name":"Fire elemental",
+            "cost":0,
+            "type":"troop",
+            "main-family": "horde",
+            "second-family": "none"
+        },
+        {
+            "id":34,
+            "name":"Firehammer",
+            "cost":0,
+            "type":"troop",
+            "main-family": "horde",
+            "second-family": "none"
+        },
+        {
+            "id":35,
+            "name":"Flamewaker",
+            "cost":0,
+            "type":"troop",
+            "main-family": "horde",
+            "second-family": "none"
+        },
+        {
+            "id":36,
+            "name":"Footmen",
+            "cost":0,
+            "type":"troop",
+            "main-family": "horde",
+            "second-family": "none"
+        },
+        {
+            "id":37,
+            "name":"Frostwolf shaman",
+            "cost":0,
+            "type":"troop",
+            "main-family": "horde",
+            "second-family": "none"
+        },
+        {
+            "id":38,
+            "name":"Gargoyle",
+            "cost":0,
+            "type":"troop",
+            "main-family": "horde",
+            "second-family": "none"
+        },
+        {
+            "id":39,
+            "name":"General Drakkisath",
+            "cost":0,
+            "type":"leader",
+            "main-family": "horde",
+            "second-family": "none"
+        },
+        {
+            "id":40,
+            "name":"Ghoul",
+            "cost":0,
+            "type":"troop",
+            "main-family": "horde",
+            "second-family": "none"
+        },
+        {
+            "id":41,
+            "name":"Gnoll brute",
+            "cost":0,
+            "type":"troop",
+            "main-family": "horde",
+            "second-family": "none"
+        },
+        {
+            "id":42,
+            "name":"Goblin sapper",
+            "cost":0,
+            "type":"troop",
+            "main-family": "horde",
+            "second-family": "none"
+        },
+        {
+            "id":43,
+            "name":"Grommash Hellscream",
+            "cost":0,
+            "type":"leader",
+            "main-family": "horde",
+            "second-family": "none"
+        },
+        {
+            "id":44,
             "name":"Chain lightning",
             "cost":0,
             "main-family": "horde",
             "second-family": "none"
         },
         {
+            "id":45,
             "name":"Chain lightning",
             "cost":0,
             "main-family": "horde",
             "second-family": "none"
         },
         {
+            "id":46,
             "name":"Chain lightning",
             "cost":0,
             "main-family": "horde",
             "second-family": "none"
         },
         {
+            "id":47,
             "name":"Chain lightning",
             "cost":0,
             "main-family": "horde",
             "second-family": "none"
         },
         {
+            "id":48,
             "name":"Chain lightning",
             "cost":0,
             "main-family": "horde",
             "second-family": "none"
         },
         {
+            "id":49,
             "name":"Chain lightning",
             "cost":0,
             "main-family": "horde",
             "second-family": "none"
         },
         {
-            "name":"Chain lightning",
-            "cost":0,
-            "main-family": "horde",
-            "second-family": "none"
-        },
-        {
-            "name":"Chain lightning",
-            "cost":0,
-            "main-family": "horde",
-            "second-family": "none"
-        },
-        {
-            "name":"Chain lightning",
-            "cost":0,
-            "main-family": "horde",
-            "second-family": "none"
-        },
-        {
-            "name":"Chain lightning",
-            "cost":0,
-            "main-family": "horde",
-            "second-family": "none"
-        },
-        {
-            "name":"Chain lightning",
-            "cost":0,
-            "main-family": "horde",
-            "second-family": "none"
-        },
-        {
-            "name":"Chain lightning",
-            "cost":0,
-            "main-family": "horde",
-            "second-family": "none"
-        },
-        {
-            "name":"Chain lightning",
-            "cost":0,
-            "main-family": "horde",
-            "second-family": "none"
-        },
-        {
-            "name":"Chain lightning",
-            "cost":0,
-            "main-family": "horde",
-            "second-family": "none"
-        },
-        {
-            "name":"Chain lightning",
-            "cost":0,
-            "main-family": "horde",
-            "second-family": "none"
-        },
-        {
-            "name":"Chain lightning",
-            "cost":0,
-            "main-family": "horde",
-            "second-family": "none"
-        },
-        {
-            "name":"Chain lightning",
-            "cost":0,
-            "main-family": "horde",
-            "second-family": "none"
-        },
-        {
-            "name":"Chain lightning",
-            "cost":0,
-            "main-family": "horde",
-            "second-family": "none"
-        },
-        {
-            "name":"Chain lightning",
-            "cost":0,
-            "main-family": "horde",
-            "second-family": "none"
-        },
-        {
-            "name":"Chain lightning",
-            "cost":0,
-            "main-family": "horde",
-            "second-family": "none"
-        },
-        {
-            "name":"Chain lightning",
-            "cost":0,
-            "main-family": "horde",
-            "second-family": "none"
-        },
-        {
-            "name":"Chain lightning",
-            "cost":0,
-            "main-family": "horde",
-            "second-family": "none"
-        },
-        {
-            "name":"Chain lightning",
-            "cost":0,
-            "main-family": "horde",
-            "second-family": "none"
-        },
-        {
-            "name":"Chain lightning",
-            "cost":0,
-            "main-family": "horde",
-            "second-family": "none"
-        },
-        {
-            "name":"Chain lightning",
-            "cost":0,
-            "main-family": "horde",
-            "second-family": "none"
-        },
-        {
-            "name":"Chain lightning",
-            "cost":0,
-            "main-family": "horde",
-            "second-family": "none"
-        },
-        {
-            "name":"Chain lightning",
-            "cost":0,
-            "main-family": "horde",
-            "second-family": "none"
-        },
-        {
-            "name":"Chain lightning",
-            "cost":0,
-            "main-family": "horde",
-            "second-family": "none"
-        },
-        {
-            "name":"Chain lightning",
-            "cost":0,
-            "main-family": "horde",
-            "second-family": "none"
-        },
-        {
-            "name":"Chain lightning",
-            "cost":0,
-            "main-family": "horde",
-            "second-family": "none"
-        },
-        {
-            "name":"Chain lightning",
-            "cost":0,
-            "main-family": "horde",
-            "second-family": "none"
-        },
-        {
-            "name":"Chain lightning",
-            "cost":0,
-            "main-family": "horde",
-            "second-family": "none"
-        },
-        {
-            "name":"Chain lightning",
-            "cost":0,
-            "main-family": "horde",
-            "second-family": "none"
-        },
-        {
-            "name":"Chain lightning",
-            "cost":0,
-            "main-family": "horde",
-            "second-family": "none"
-        },
-        {
-            "name":"Chain lightning",
-            "cost":0,
-            "main-family": "horde",
-            "second-family": "none"
-        },
-        {
-            "name":"Chain lightning",
-            "cost":0,
-            "main-family": "horde",
-            "second-family": "none"
-        },
-        {
-            "name":"Chain lightning",
+            "id":100,
+            "name":"Sylvanas Windrunner",
             "cost":0,
             "main-family": "horde",
             "second-family": "none"
