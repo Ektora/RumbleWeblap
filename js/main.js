@@ -29,8 +29,8 @@ function loadMiniToHtml(minis){
                         <img src="../../src/images/icons/${familyNameToFamilyIcon(element["main-family"],element["second-family"])}.png" class="mini-family-image position-absolute" alt="">
                         <img src="../../src/images/icons/${element.type}.png" class="mini-type-image position-absolute" alt="">
                         <img src="../../src/images/minis/${nameToImageName(element.name)}.png" class="mini-list-image" alt="...">
-                        <img src="../../src/images/statue/${familyNameToStatueName(element["main-family"],element["second-family"])}.png" class="mini-list-base d-none d-md-inline position-absolute start-50 bottom-0 translate-middle-x" alt="...">
-                        <div class="mini-cost-container position-absolute bottom-0 start-50 translate-middle">
+                        <img src="../../src/images/statue/${familyNameToStatueName(element["main-family"],element["second-family"])}.png" class="mini-list-base d-none d-sm-inline position-absolute start-50 bottom-0 translate-middle-x" alt="...">
+                        <div class="mini-cost-container position-absolute">
                             <img src="../../src/images/icons/gold.png" class="mini-cost-image" alt="...">
                             <!--<span class="position-absolute d-inline-flex align-items-center top-50 start-50 translate-middle text-white fw-bold mini-cost-value">3</span>-->
                                         <img src="../../src/images/icons/value_${element.cost}.png" class="mini-cost-image-value position-absolute top-50 start-50 translate-middle" alt="...">

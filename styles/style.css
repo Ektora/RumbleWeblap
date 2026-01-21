@@ -1,0 +1,18 @@
+:root{
+    --page-bg-color: #0B1220; 
+    --page-panels-color: #111C2E;
+    --page-panels-border: rgba(255,255,255,0.08);
+    --main-text-color: #E6EDF7;
+    --secondary-text-color:#A9B4C7;
+    --alliance-color: rgb(60, 74, 188);
+    --beast-color: rgb(179, 120, 61);
+    --blackrock-color: rgb(73, 69, 86);
+    --cenarion-color: rgb(43, 116, 100);
+    --horde-color: rgb(199, 57, 65);
+    --undead-color: #5A359A;
+    --neutral-color: #75838F;
+}
+
+body{
+    background-color: var(--page-bg-color);
+}
