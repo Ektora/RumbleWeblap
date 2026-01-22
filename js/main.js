@@ -36,9 +36,9 @@ function loadMiniToHtml(minis){
                                         <img src="../../src/images/icons/value_${element.cost}.png" class="mini-cost-image-value position-absolute top-50 start-50 translate-middle" alt="...">
                         </div>
                     </div>
-                    <div class="col-7 col-sm-12">
-                        <div class="card-body d-flex justify-content-center align-content-center p-0">
-                            <h5 class="card-title text-center m-auto">${element.name}</h5>
+                    <div class="col-7 col-sm-12 align-content-center">
+                        <div class="card-body d-flex justify-content-center  p-0">
+                            <h5 class="card-title text-center m-auto mini-name">${element.name}</h5>
                         </div>
                     </div>
                 </div>

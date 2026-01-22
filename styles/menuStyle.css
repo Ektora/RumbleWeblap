@@ -1,5 +1,26 @@
+:root{
+    --page-bg-color: #0B1220; 
+    --page-panels-color: #111C2E;
+    --page-panels-border: rgba(255,255,255,0.08);
+    --main-text-color: #E6EDF7;
+    --secondary-text-color:#A9B4C7;
+    --rumble-color: #C38800;
+    --alliance-color: rgb(60, 74, 188);
+    --beast-color: rgb(179, 120, 61);
+    --blackrock-color: rgb(73, 69, 86);
+    --cenarion-color: rgb(43, 116, 100);
+    --horde-color: rgb(199, 57, 65);
+    --undead-color: #5A359A;
+    --neutral-color: #75838F;
+}
+
 nav{
     color: white;
+    background-color: var(--page-panels-color);
+}
+
+.navbar-brand{
+  color: var(--rumble-color);
 }
 
 .navbar-toggler-icon {
@@ -10,4 +31,20 @@ nav{
 .navbar .navbar-toggler:focus-visible {
   outline: none; /* a böngésző alap outline-ja */
   box-shadow: 0 0 0 .1rem rgba(255, 255, 255, .2); /* <-- ide a saját színed */
+}
+
+.menu-border{
+  border-right: 2px solid var(--main-text-color);
+}
+
+.menu-border-active{
+  border-right: 2px solid var(--rumble-color);
+}
+
+.nav-link{
+  color: var(--main-text-color);
+}
+
+.nav-link.active{
+  color: var(--rumble-color);
 }
