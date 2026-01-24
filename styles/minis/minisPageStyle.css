@@ -4,6 +4,7 @@
     --page-panels-border: rgba(255, 255, 255, 0.08);
     --main-text-color: #E6EDF7;
     --secondary-text-color: #A9B4C7;
+    --rumble-color: #C38800;
     --alliance-color: rgb(60, 74, 188);
     --beast-color: rgb(179, 120, 61);
     --blackrock-color: rgb(73, 69, 86);
@@ -74,6 +75,8 @@
     z-index: 4;
     width: 20px;
 }
+
+
 
 
 
@@ -150,6 +153,40 @@
 
     .mini-name{
         width: 90%;
+    }
+
+    .filter-item{
+        display: inline-block;
+    }
+
+    .filter-checkbox{
+        opacity: 0;
+        width: 1;
+        height: 1;
+        pointer-events: none;
+    }
+
+    .filter-label{
+        display: inline-flex;
+        padding: 2px;
+        border: 1px solid transparent;
+        border-radius: 5px;
+    }
+
+    .filter-label img{
+        width: 24px;
+        height: 24px;
+        display: block;
+        filter: brightness(.75);
+    }
+
+    .filter-checkbox:checked + .filter-label{
+        border-color: var(--rumble-color);
+        
+    }
+
+    .filter-checkbox:checked + .filter-label img{
+        filter: brightness(1);
     }
 }
 

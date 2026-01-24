@@ -33,13 +33,7 @@ nav{
   box-shadow: 0 0 0 .1rem rgba(255, 255, 255, .2); /* <-- ide a saját színed */
 }
 
-.menu-border{
-  border-right: 2px solid var(--main-text-color);
-}
 
-.menu-border-active{
-  border-right: 2px solid var(--rumble-color);
-}
 
 .nav-link{
   color: var(--main-text-color);
@@ -47,4 +41,16 @@ nav{
 
 .nav-link.active{
   color: var(--rumble-color);
+}
+
+@media screen and (min-width: 576px) {
+
+    .menu-border{
+    border-right: 2px solid var(--main-text-color);
+  }
+
+  .menu-border-active{
+    border-right: 2px solid var(--rumble-color);
+  }
+
 }
