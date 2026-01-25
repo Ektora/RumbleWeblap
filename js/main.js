@@ -1,6 +1,6 @@
 import {Mini} from './models/Mini.js'; 
-import { loadFamiliesToFilter, loadMiniToHtml, setupFamilyFilters } from './miniPage.js';
-import { Families, Types } from './models/MiniTypes.js';
+import { loadFamiliesToFilter, loadMiniToHtml, setupFamilyFilters, loadCostsToFilter, setupCostFilters, loadTypesToFilter, setupTypeFilters } from './miniPage.js';
+import { Families, Types, Costs } from './models/MiniTypes.js';
 
 document.addEventListener("DOMContentLoaded",init);
 
@@ -11,6 +11,10 @@ function init(){
     readMinisFromFile();
     loadFamiliesToFilter(Families);
     setupFamilyFilters();
+    loadTypesToFilter(Types);
+    setupTypeFilters();
+    loadCostsToFilter(Costs);
+    setupCostFilters();
 }
 
 async function readMinisFromFile(){
@@ -24,7 +28,7 @@ async function readMinisFromFile(){
         miniList.push(new Mini(mini));
     })
 
-    loadMiniToHtml(miniList, Families ,Types);
+    loadMiniToHtml(miniList, Families ,Types, Costs);
 }
 
 
