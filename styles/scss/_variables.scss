@@ -11,8 +11,10 @@
     --horde-color: rgb(199, 57, 65);
     --undead-color: #5A359A;
     --neutral-color: #75838F;
-}
-
-body{
-    background-color: var(--page-bg-color);
+    --rumble-color: #C38800;
+    
+    --filter-section-bg-color :rgba(255,255,255,0.03);
+    --filter-section-border: rgba(255,255,255,0.08);
+    --filter-btn-bg: rgba(255,255,255,0.06);
+    --filter-btn-border: rgba(255,255,255,0.14);
 }
