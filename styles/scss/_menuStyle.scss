@@ -13,8 +13,8 @@ nav{
 
 .navbar .navbar-toggler:focus,
 .navbar .navbar-toggler:focus-visible {
-  outline: none; /* a böngésző alap outline-ja */
-  box-shadow: 0 0 0 .1rem rgba(255, 255, 255, .2); /* <-- ide a saját színed */
+  outline: none; 
+  box-shadow: 0 0 0 .1rem rgba(255, 255, 255, .2); 
 }
 
 
@@ -23,7 +23,8 @@ nav{
   color: var(--main-text-color);
 }
 
-.nav-link.active{
+.nav-link.active,
+.nav-link:hover{
   color: var(--rumble-color);
 }
 
