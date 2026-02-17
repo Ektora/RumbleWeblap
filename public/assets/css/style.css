@@ -7,7 +7,7 @@ body .mini-color {
 
 :root {
   --page-bg-color: #0B1220;
-  --page-panels-color: #111C2E;
+  --page-panels-color: rgb(17, 28, 46);
   --page-panels-border: rgba(255,255,255,0.08);
   --main-text-color: #E6EDF7;
   --secondary-text-color:#A9B4C7;
@@ -121,6 +121,66 @@ nav {
   width: 20px;
 }
 
+.filterDiv #mini-list-search {
+  color: var(--main-text-color);
+  margin-top: 3px;
+  margin-bottom: 3px;
+  background-color: var(--filter-btn-bg);
+  border-color: var(--filter-btn-border);
+  filter: brightness(0.75);
+}
+.filterDiv #mini-list-search:focus {
+  box-shadow: 0 0 0 0.1rem var(--rumble-color);
+  filter: brightness(1);
+}
+.filterDiv #mini-list-search::placeholder {
+  color: var(--main-text-color);
+}
+.filterDiv {
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  background: var(--filter-bg-color);
+  border: 1px solid var(--filter-section-border);
+  border-radius: 5px;
+  padding: 5px 5px 6px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+.filterDiv .filter-item {
+  display: inline-block;
+  margin: 2px;
+}
+.filterDiv .filter-item .filter-checkbox {
+  opacity: 0;
+  width: 1;
+  height: 1;
+  pointer-events: none;
+}
+.filterDiv .filter-item .filter-label {
+  display: inline-flex;
+  padding: 2px;
+  background: var(--filter-btn-bg);
+  border: 1px solid var(--filter-btn-border);
+  border-radius: 5px;
+}
+.filterDiv .filter-item .filter-label img {
+  width: 20px;
+  height: 20px;
+  display: block;
+  filter: brightness(0.75);
+}
+.filterDiv #costFilter img {
+  width: 16px;
+  height: 16px;
+}
+
+.filter-checkbox:checked + .filter-label {
+  border-color: var(--rumble-color);
+}
+
+.filter-checkbox:checked + .filter-label img {
+  filter: brightness(1);
+}
+
 @media screen and (min-width: 576px) {
   .mini-card {
     width: 160px;
@@ -183,51 +243,24 @@ nav {
     transition: all 0.15s ease-out;
   }
   .filterDiv #mini-list-search {
-    color: var(--main-text-color);
     margin-top: 5px;
     margin-bottom: 5px;
-    background-color: var(--filter-btn-bg);
-    border-color: var(--filter-btn-border);
-    filter: brightness(0.75);
-  }
-  .filterDiv #mini-list-search:focus {
-    box-shadow: 0 0 0 0.1rem var(--rumble-color);
-    filter: brightness(1);
-  }
-  .filterDiv #mini-list-search::placeholder {
-    color: var(--main-text-color);
   }
   .filterDiv {
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
-    background: var(--filter-bg-color);
-    border: 1px solid var(--filter-section-border);
     border-radius: 10px;
     padding: 10px 10px 12px;
     margin-top: 5px;
     margin-bottom: 5px;
   }
   .filterDiv .filter-item {
-    display: inline-block;
-    margin: 0 2px;
-  }
-  .filterDiv .filter-item .filter-checkbox {
-    opacity: 0;
-    width: 1;
-    height: 1;
-    pointer-events: none;
+    margin: 2px;
   }
   .filterDiv .filter-item .filter-label {
-    display: inline-flex;
     padding: 2px;
-    background: var(--filter-btn-bg);
-    border: 1px solid var(--filter-btn-border);
-    border-radius: 5px;
   }
   .filterDiv .filter-item .filter-label img {
     width: 24px;
     height: 24px;
-    display: block;
-    filter: brightness(0.75);
   }
   .filterDiv #costFilter img {
     width: 20px;
@@ -276,35 +309,97 @@ nav {
   background: linear-gradient(135deg, rgba(60, 74, 188, 0.2) 0%, rgba(60, 74, 188, 0.4) 100%);
 }
 
+.alliance-reverse-gradient {
+  background: linear-gradient(180deg, rgba(60, 74, 188, 0.4) 0%, rgba(60, 74, 188, 0.1) 75%, rgba(17, 28, 46, 0.1) 100%);
+}
+
 .alliance-undead-gradient {
-  background: rgb(60, 74, 188);
   background: linear-gradient(135deg, rgba(60, 74, 188, 0.2) 0%, rgba(60, 74, 188, 0.4) 33%, rgba(90, 53, 154, 0.2) 66%, rgba(90, 53, 154, 0.4) 100%);
+}
+
+.alliance-undead-reverse-gradient {
+  background: linear-gradient(180deg, rgba(60, 74, 188, 0.4) 0%, rgba(90, 53, 154, 0.4) 50%, rgba(17, 28, 46, 0.1) 100%);
 }
 
 .beast-gradient {
   background: linear-gradient(135deg, rgba(179, 120, 61, 0.2) 0%, rgba(179, 120, 61, 0.4) 100%);
 }
 
+.beast-reverse-gradient {
+  background: linear-gradient(180deg, rgba(179, 120, 61, 0.4) 0%, rgba(179, 120, 61, 0.1) 75%, rgba(17, 28, 46, 0.1) 100%);
+}
+
 .blackrock-gradient {
   background: linear-gradient(135deg, rgba(73, 69, 86, 0.2) 0%, rgba(73, 69, 86, 0.8) 100%);
+}
+
+.blackrock-reverse-gradient {
+  background: linear-gradient(180deg, rgba(73, 69, 86, 0.4) 0%, rgba(73, 69, 86, 0.1) 75%, rgba(17, 28, 46, 0.1) 100%);
 }
 
 .cenarion-gradient {
   background: linear-gradient(135deg, rgba(43, 116, 100, 0.2) 0%, rgba(43, 116, 100, 0.4) 100%);
 }
 
+.cenarion-reverse-gradient {
+  background: linear-gradient(180deg, rgba(43, 116, 100, 0.4) 0%, rgba(43, 116, 100, 0.1) 75%, rgba(17, 28, 46, 0.1) 100%);
+}
+
 .horde-gradient {
   background: linear-gradient(135deg, rgba(199, 57, 65, 0.2) 0%, rgba(199, 57, 65, 0.4) 100%);
 }
 
+.horde-reverse-gradient {
+  background: linear-gradient(180deg, rgba(199, 57, 65, 0.4) 0%, rgba(199, 57, 65, 0.1) 75%, rgba(17, 28, 46, 0.1) 100%);
+}
+
 .undead-gradient {
-  background: #5a359a;
   background: linear-gradient(135deg, rgba(90, 53, 154, 0.2) 0%, rgba(90, 53, 154, 0.4) 100%);
 }
 
+.undead-reverse-gradient {
+  background: linear-gradient(180deg, rgba(90, 53, 154, 0.4) 0%, rgba(90, 53, 154, 0.1) 75%, rgba(17, 28, 46, 0.1) 100%);
+}
+
 .undead-beast-gradient {
-  background: #5a359a;
   background: linear-gradient(135deg, rgba(90, 53, 154, 0.2) 0%, rgba(90, 53, 154, 0.4) 33%, rgba(179, 120, 61, 0.2) 66%, rgba(179, 120, 61, 0.4) 100%);
+}
+
+.undead-beast-reverse-gradient {
+  background: linear-gradient(180deg, rgba(90, 53, 154, 0.4) 0%, rgba(179, 120, 61, 0.4) 50%, rgba(17, 28, 46, 0.1) 100%);
+}
+
+#mini-infos {
+  background-color: var(--page-panels-color);
+  color: var(--main-text-color);
+}
+
+.mini-nav {
+  color: var(--main-text-color);
+}
+.mini-nav .mini-nav-item {
+  border: 1px solid var(--page-panels-border);
+}
+.mini-nav .mini-nav-item .mini-nav-img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+
+@media screen and (min-width: 576px) {
+  .mini-nav .mini-nav-item {
+    width: 250px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .mini-nav .mini-nav-item {
+    width: 300px;
+  }
+  .mini-nav .mini-nav-item .mini-nav-img {
+    width: 100%;
+    height: auto;
+    max-width: 110px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

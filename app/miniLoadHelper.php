@@ -12,10 +12,18 @@ function mergeFamilyNames(string $mainFamilyName,string $secondFamilyName) : str
     return $familyName;
 }
 
-    function getImageName(string $name) : string{
+    function getName(string $name) : string{
         //$imageName = this.name.replaceAll(" ","-").toLowerCase();
-        $imageName = strtolower(str_replace(" ","-",$name));
-        return $imageName;
+        $name = strtolower(str_replace(" ","-",$name));
+        return $name;
+    }
+
+    function getArrayIndexByName(array $miniList,string $name) : int{
+        foreach($miniList as $index => $mini){
+            if($name == getName($mini['name']))
+                return $index;
+        }
+        return 0;
     }
 
     function familyNameToStatueName(string $mainFamily, string $secondFamily) : string{

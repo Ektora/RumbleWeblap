@@ -53,7 +53,7 @@ declare(strict_types=1);
                     <?php foreach ($miniList as $mini): ?>
 
                     <div class="col">
-                        <a class="text-decoration-none text-white" href="/pages/minis/mini-details.php?id=<?php echo (int)$mini['id']; ?>">
+                        <a class="text-decoration-none text-white" href="/pages/minis/mini-details.php?name=<?php echo (string)getName($mini['name']); ?>">
                         <div class="card mini-card position-relative m-auto py-2 <?php echo familyNameToGradient($mini['main-family'],$mini['second-family']) ?>-gradient"
                             data-type="<?php echo $mini['type'] ?>"
                             data-cost="<?php echo $mini['cost'] ?>"
@@ -63,7 +63,7 @@ declare(strict_types=1);
                                 <div class="col-5 col-sm-12 position-relative mini-list-stack">
                                     <img src="<?php echo $miniFamilies[mergeFamilyNames($mini['main-family'],$mini['second-family'])]['imageSrc'] ?>" class="mini-family-image position-absolute" alt="">
                                     <img src="<?php echo $miniTypes[$mini['type']]['imageSrc'] ?>" class="mini-type-image position-absolute" alt="">
-                                    <img src="/assets/images/minis/<?php echo getImageName($mini['name']) ?>.png" class="mini-list-image" alt="...">
+                                    <img src="/assets/images/minis/<?php echo getName($mini['name']) ?>.png" class="mini-list-image" alt="...">
                                     <img src="/assets/images/statue/<?php echo familyNameToStatueName($mini['main-family'],$mini['second-family']) ?>.png" class="mini-list-base d-none d-sm-inline position-absolute start-50 bottom-0 translate-middle-x" alt="...">
                                     <div class="mini-cost-container position-absolute">
                                         <img src="/assets/images/icons/gold.png" class="mini-cost-image" alt="...">

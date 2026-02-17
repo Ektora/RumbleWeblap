@@ -1,9 +1,6 @@
-import { loadFamiliesToFilter, setupFamilyFilters, loadCostsToFilter, setupCostFilters, loadTypesToFilter, setupTypeFilters } from './miniPage.js';
+import {setupFamilyFilters, setupCostFilters, setupTypeFilters } from './miniPage.js';
 
 document.addEventListener("DOMContentLoaded",init);
-
-let miniList = [];
-
 
 function init(){
     //readMinisFromFile();
