@@ -1,5 +1,5 @@
 nav{
-    color: white;
+    //color: white;
     background-color: var(--page-panels-color);
 }
 
@@ -19,13 +19,28 @@ nav{
 
 
 
-.nav-link{
+.nav-link, .nav-link a{
   color: var(--main-text-color);
 }
 
 .nav-link.active,
-.nav-link:hover{
+.nav-link:hover,
+.nav-link:focus{
   color: var(--rumble-color);
+}
+
+.dropdown-menu{
+    color: var(--main-text-color);
+    background-color: var(--page-panels-color);
+
+    .dropdown-item{
+      color: var(--main-text-color);
+      
+    }
+    .dropdown-item:hover{
+      color: var(--rumble-color);
+      background-color: var(--page-panels-color);
+    }
 }
 
 @media screen and (min-width: 576px) {

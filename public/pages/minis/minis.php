@@ -1,6 +1,8 @@
 <?php
 
 declare(strict_types=1);
+require_once dirname(__DIR__,2) . '/config.php';
+require_once PRIVATE_BASE_PATH. '/app/miniLoadHelper.php';
 ?>
 <html>
 
@@ -20,7 +22,7 @@ declare(strict_types=1);
 <body>
     <nav id="menu-slot">
         <?php
-        require dirname(__DIR__) . '/menu.php';
+        require BASE_PATH . '/pages/menu.php';
         ?>
     </nav>
     <div class="container">
@@ -35,16 +37,15 @@ declare(strict_types=1);
 
                 <div class="row pt-1 row-cols-1 row-cols-sm-3 row-cols-lg-4 row-cols-xl-5 g-2" id="miniCards">
                     <?php
-                    $base_path = dirname(__DIR__, 3);
-                    require_once $base_path . '/app/miniLoadHelper.php';
 
                     
-                    $miniFilePath = $base_path . '/datas/minis.json';
+
+                    $miniFilePath = PRIVATE_BASE_PATH . '/datas/minis.json';
                     $minisFile = file_get_contents($miniFilePath);
                     $data = json_decode($minisFile, true, 512, JSON_THROW_ON_ERROR);
                     $miniList = $data['minis'] ?? [];
 
-                    $miniStatTypes = require $base_path . '/app/models/miniTypes.php';
+                    $miniStatTypes = require PRIVATE_BASE_PATH . '/app/models/miniTypes.php';
                     $miniFamilies = $miniStatTypes['families'];
                     $miniCosts = $miniStatTypes['costs'];
                     $miniTypes = $miniStatTypes['types'];
@@ -68,7 +69,7 @@ declare(strict_types=1);
                                     <div class="mini-cost-container position-absolute">
                                         <img src="/assets/images/icons/gold.png" class="mini-cost-image" alt="...">
                                         <!--<span class="position-absolute d-inline-flex align-items-center top-50 start-50 translate-middle text-white fw-bold mini-cost-value">3</span>-->
-                                                    <img src="<?php echo $miniCosts[$mini['cost']]['imageSrc'] ?>" class="mini-cost-image-value position-absolute top-50 start-50 translate-middle" alt="...">
+                                        <img src="<?php echo $miniCosts[$mini['cost']]['imageSrc'] ?>" class="mini-cost-image-value position-absolute top-50 start-50 translate-middle" alt="...">
                                     </div>
                                 </div>
                                 <div class="col-7 col-sm-12 align-content-center">

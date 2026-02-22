@@ -3,4 +3,13 @@
 @use "menuStyle";
 @use "minis/minisPageStyle";
 @use "minis/miniInfos";
+@use "miniCreator";
+@use "forms";
+@use "login";
 
+:root{
+}
+
+body{
+    color: var(--main-text-color);
+}

@@ -1,0 +1,126 @@
+/*
+.form-floating{
+
+    .form-control{
+        color: var(--main-text-color);
+        margin-top: 3px;
+        margin-bottom: 3px;
+        background-color: var(--filter-btn-bg);
+        border-color: var(--filter-btn-border);
+        filter: brightness(.75);
+
+        &:focus {
+            background-color: var(--filter-btn-bg);
+            border-color: var(--filter-btn-border);
+            color: var(--main-text-color);
+            box-shadow: 0 0 0 .1rem var(--rumble-color);
+            filter: brightness(1);
+        }
+   
+    }
+}*/
+
+input[type='text'], input[type='password'], input[type='number']{
+        color: var(--main-text-color);
+        margin-top: 3px;
+        margin-bottom: 3px;
+        background-color: var(--filter-btn-bg);
+        border-color: var(--filter-btn-border);
+        filter: brightness(.75);
+
+        &::placeholder{
+            opacity: 1;
+        }
+
+        &:focus, &:hover {
+            background-color: var(--filter-btn-bg);
+            border-color: var(--filter-btn-border);
+            color: var(--main-text-color);
+            box-shadow: 0 0 0 .1rem var(--rumble-color);
+            filter: brightness(1);
+        }
+
+        &:focus::placeholder{
+            opacity: 0;
+        }
+
+    }
+
+input[type='file']{
+        color: var(--main-text-color);
+        margin-top: 3px;
+        margin-bottom: 3px;
+        background-color: var(--filter-btn-bg);
+        border-color: var(--filter-btn-border);
+        filter: brightness(.75);
+        &:focus, &:hover {
+            background-color: var(--filter-btn-bg);
+            border-color: var(--filter-btn-border);
+            color: var(--main-text-color);
+            box-shadow: 0 0 0 .1rem var(--rumble-color);
+            filter: brightness(1);
+        }
+
+        &::file-selector-button{
+            color: var(--main-text-color);
+            background-color: var(--filter-btn-bg);
+            border-color: var(--filter-btn-border);
+        
+        }
+
+        &:hover::file-selector-button{
+            background-color: var(--filter-btn-bg) !important;
+            border-color: var(--filter-btn-border) !important;
+            color: var(--main-text-color) !important;
+            box-shadow: 0 0 0 .1rem var(--rumble-color) !important;
+            filter: brightness(1) !important;
+        }
+
+    }
+
+
+
+
+
+.form-select{
+    color: var(--main-text-color);
+    margin-top: 3px;
+    margin-bottom: 3px;
+    background-color: var(--filter-btn-bg);
+    border-color: var(--filter-btn-border);
+    filter: brightness(.75);
+    &:focus, &:hover {
+            background-color: var(--filter-btn-bg);
+            border-color: var(--filter-btn-border);
+            color: var(--main-text-color);
+            box-shadow: 0 0 0 .1rem var(--rumble-color);
+            filter: brightness(1);
+        }
+    
+    option{
+            margin-top: 3px;
+            margin-bottom: 3px;
+            color: #E6EDF7;
+            background-color: #242E3F;
+        }
+
+}
+
+
+
+
+.btn{
+    color: var(--main-text-color);
+    background-color: var(--filter-btn-bg);
+    border-color: var(--filter-btn-border);
+
+    &:focus,
+    &:hover {
+            background-color: var(--filter-btn-bg);
+            border-color: var(--filter-btn-border);
+            color: var(--main-text-color);
+            box-shadow: 0 0 0 .1rem var(--rumble-color);
+        }
+
+}
+

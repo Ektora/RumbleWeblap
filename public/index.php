@@ -11,7 +11,8 @@
 <body>
     <nav id="menu-slot">
         <?php
-            require __DIR__ . '/pages/menu.php'; 
+            require __DIR__ . '/config.php';
+            require BASE_PATH. '/pages/menu.php'; 
         ?>
     </nav>
     <div class="container">
