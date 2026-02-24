@@ -14,9 +14,14 @@ final class MiniRepository{
     }
 
     public function createMini(){
-
+        
     }
 
+    public function getMini(){
+
+    }
 }
+
+
 
 ?>

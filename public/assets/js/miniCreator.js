@@ -1,10 +1,8 @@
-const secondaryAllowed = {
-  alliance: ["none", "cenarion", "undead"],
-  blackrock: ["none", "horde"],
-  horde: ["none", "blackrock"],
-  undead: ["none", "beast", "horde"]
-};
+import { Mini, secondaryAllowed } from "/assets/js/model/Mini.js";
 
+
+
+const mini = new Mini();
 
 updateSecondFamily(document.getElementById("mini-creator-main-family").value);
 document.getElementById("mini-creator-name").addEventListener("input", changeName);
@@ -12,13 +10,19 @@ document.getElementById("mini-creator-type").addEventListener("change", changeTy
 document.getElementById("mini-creator-cost").addEventListener("input", changeCost);
 document.getElementById("mini-creator-main-family").addEventListener("change", changeMainFamily);
 document.getElementById("mini-creator-second-family").addEventListener("change", changeSecondFamily);
+document.getElementById("mini-creator-file").addEventListener("change",changeMiniImage);
 
 function changeName(event){
     let targetElement = document.getElementById("mini-creator-display-name");
-    if(event.target.value != "") 
+    if(event.target.value != "") {
         targetElement.textContent = event.target.value;
-    else
+        mini.setName(event.target.value);
+        console.log(mini.getImageName());
+    }
+    else{
         targetElement.textContent = "Mini név";
+        mini.setName("");
+    }
 }
 
 function changeType(event){
@@ -36,14 +40,17 @@ function changeCost(event){
 }
 
 function changeMainFamily(event){
-    changeMainGradient(event.target.value);
     updateSecondFamily(event.target.value);
+    changeMainGradient(event.target.value);
+    changeMainFamilyImage(event.target.value);
+    mini.setMainFamily(event.target.value);
   
 }
 
 function changeSecondFamily(event){
     changeSecondGradient(event.target.value);
-  
+    changeSecondFamilyImage(event.target.value);
+    mini.setSecondFamily(event.target.value);
 }
 
 function updateSecondFamily(mainValue){
@@ -84,4 +91,30 @@ function changeSecondGradient(secondFamilyValue){
     }
     miniDiv.classList.add(`${mainFamilySelectElement.value}-${secondFamilyValue}-gradient`);
 
+}
+
+function changeMainFamilyImage(mainFamilyValue){
+    const secondFamilySelectElement = document.getElementById("mini-creator-second-family");
+    const familyImageElement = document.getElementById("mini-creator-display-family-image");
+    if(secondFamilySelectElement.value == "none"){
+        familyImageElement.src = `/assets/images/icons/${mainFamilyValue}.png`;
+    }
+    else{
+        familyImageElement.src = `/assets/images/icons/${mainFamilyValue}${secondFamilySelectElement.value}.png`;
+    }
+}
+
+function changeSecondFamilyImage(secondFamilyValue){
+    const mainFamilySelectElement = document.getElementById("mini-creator-main-family");
+    const familyImageElement = document.getElementById("mini-creator-display-family-image");
+
+    familyImageElement.src = `/assets/images/icons/${mainFamilySelectElement.value}${secondFamilyValue}.png`;
+
+}
+
+function changeMiniImage(miniImage){
+    const displayImageElement = document.getElementById("mini-creator-display-image");
+    const image = miniImage.target.files[0];
+    let imageSrc = URL.createObjectURL(image);
+    displayImageElement.src = imageSrc;
 }

@@ -38,7 +38,7 @@ require_once PRIVATE_BASE_PATH . '/app/miniRepository.php';
                     <div class="position-relative mini-creator-display-stack " id="mini-creator-display-stack">
                         <img class="mini-creator-display-family-image position-absolute" id="mini-creator-display-family-image" src="/assets/images/icons/alliance.png" alt="">
                         <img class="mini-creator-display-type-image position-absolute" id="mini-creator-display-type-image" src="/assets/images/icons/troop.png" alt="">
-                        <img src="/assets/images/minis/kobold.png" class="mini-creator-display-image" alt="...">
+                        <img src="/assets/images/minis/kobold.png" class="mini-creator-display-image" id="mini-creator-display-image" alt="...">
                         <img src="/assets/images/statue/Statue_Base_Neutral_Pose.png" class="mini-creator-display-base d-none d-sm-inline position-absolute start-50 bottom-0 translate-middle-x" alt="...">
                         <div class="mini-creator-display-cost-container position-absolute">
                             <img src="/assets/images/icons/gold.png" class="mini-creator-display-cost-image" alt="...">
