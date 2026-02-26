@@ -6,6 +6,7 @@ export const secondaryAllowed = {
 };
 
 export class Mini{
+    id;
     name;
     cost;
     type;
@@ -15,12 +16,14 @@ export class Mini{
     leaderDescription;
     leaderFunnyDescription;
     constructor(){
+        this.id = 0;
         this.name = "";
         this.cost = 1;
         this.mainFamily = "alliance";
         this.secondFamily = "none";
         this.description = "";
-        this.leaderDescription = "";
+        this.leaderAbilityName = "";
+        this.leaderAbilityDescription = "";
         this.leaderFunnyDescription = "";
     }
 
@@ -84,7 +87,7 @@ export class Mini{
             }
         }
         else{
-            this.secondFamilyFamily = secondFamilyFamily;
+            this.secondFamilyFamily = secondFamily;
         }
         console.log(this.name + " " + this.mainFamily + " " + this.secondFamily);
     }

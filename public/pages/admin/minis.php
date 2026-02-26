@@ -12,8 +12,10 @@ $minisFile = file_get_contents($miniFilePath);
 $data = json_decode($minisFile, true, 512, JSON_THROW_ON_ERROR);
 $miniList = $data['minis'] ?? [];
 */
+$targetDir = BASE_PATH . '/assets/images/minis';
 $miniRep = new MiniRepository(db());
 $miniList = $miniRep -> getAll();
+echo count($miniList);
 $miniStatTypes = require PRIVATE_BASE_PATH . '/app/models/miniTypes.php';
 $miniFamilies = $miniStatTypes['families'];
 $miniCosts = $miniStatTypes['costs'];
@@ -44,7 +46,7 @@ $miniTypes = $miniStatTypes['types'];
 
         <div class="row">
             <div id="minisListDisplay"
-                class="col-md-9 order-2 order-md-1">
+                class="col-md-9 order-2 order-md-1 pb-2">
                 <div class="page-header">
                     <h1>Warcraft Rumble <span class="mini-color">Minik</span> listája</h1>
                     <p>Az oldalon találhatóak meg a Warcraft Rumble játékban jelenleg elérhető Minik, amiket család, típus és költség alapján lehet keresni.</p>
@@ -52,10 +54,31 @@ $miniTypes = $miniStatTypes['types'];
 
                 <div class="row pt-1 row-cols-1 row-cols-sm-3 row-cols-lg-4 row-cols-xl-5 g-2" id="miniCards">
 
+                    <div class="col">
+                            <a class="text-decoration-none text-white" href="/pages/admin/miniCreator.php?name=newMini">
+                                <div class="card mini-card position-relative m-auto py-2"
+                                    data-type=""
+                                    data-cost=""
+                                    data-main-family=""
+                                    data-second-family="">
+                                    <div class="row g-0">
+                                        <div class="col-5 col-sm-12 position-relative mini-list-stack">
+                                            <img src="/assets/images/icons/newMini.png" class="mini-list-image" alt="...">
+                                        </div>
+                                        <div class="col-7 col-sm-12 align-content-center">
+                                            <div class="card-body d-flex justify-content-center  p-0">
+                                                <h5 class="card-title text-center m-auto mini-name">Új mini</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
                     <?php foreach ($miniList as $mini): ?>
 
                         <div class="col">
-                            <a class="text-decoration-none text-white" href="/pages/admin/miniCreator.php?name=<?php echo (string)getName($mini['name']); ?>">
+                            <a class="text-decoration-none text-white" href="/pages/admin/miniCreator.php?id=<?php echo (int)($mini['id']); ?>&name=<?php echo (string)getName($mini['name']); ?>">
                                 <div class="card mini-card position-relative m-auto py-2 <?php echo familyNameToGradient($mini['main_family'], $mini['second_family']) ?>-gradient"
                                     data-type="<?php echo $mini['mini_type'] ?>"
                                     data-cost="<?php echo $mini['cost'] ?>"
@@ -65,7 +88,13 @@ $miniTypes = $miniStatTypes['types'];
                                         <div class="col-5 col-sm-12 position-relative mini-list-stack">
                                             <img src="<?php echo $miniFamilies[mergeFamilyNames($mini['main_family'], $mini['second_family'])]['imageSrc'] ?>" class="mini-family-image position-absolute" alt="">
                                             <img src="<?php echo $miniTypes[$mini['mini_type']]['imageSrc'] ?>" class="mini-type-image position-absolute" alt="">
+                                            <?php if (!is_file($targetDir . '/' . getName($mini['name']) . '.png')): ?>
+                                            <img src="/assets/images/minis/kobold.png" class="mini-list-image" alt="...">
+                                            <?php else: ?>
                                             <img src="/assets/images/minis/<?php echo getName($mini['name']) ?>.png" class="mini-list-image" alt="...">
+                                            <?php endif; ?>
+
+
                                             <img src="/assets/images/statue/<?php echo familyNameToStatueName($mini['main_family'], $mini['second_family']) ?>.png" class="mini-list-base d-none d-sm-inline position-absolute start-50 bottom-0 translate-middle-x" alt="...">
                                             <div class="mini-cost-container position-absolute">
                                                 <img src="/assets/images/icons/gold.png" class="mini-cost-image" alt="...">

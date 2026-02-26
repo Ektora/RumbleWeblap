@@ -15,6 +15,7 @@ function mergeFamilyNames(string $mainFamilyName,string $secondFamilyName) : str
     function getName(string $name) : string{
         //$imageName = this.name.replaceAll(" ","-").toLowerCase();
         $name = strtolower(str_replace(" ","-",$name));
+        $name = str_replace('\'','',$name);
         return $name;
     }
 
@@ -33,7 +34,7 @@ function mergeFamilyNames(string $mainFamilyName,string $secondFamilyName) : str
     if($mainFamily == "neutral"){
         $statueBaseImageName = "Statue_Base_Neutral_Pose";
     }
-    else if($secondFamily == "none"){
+    else if($secondFamily == "none" || $secondFamily == null){
         //mainFamilyHelper = this.mainFamily.slice(0,1).toUpperCase() + this.mainFamily.slice(1,this.mainFamily.length)
         $statueBaseImageName = 'Statue_Base_' . ucfirst($mainFamily) . '_Pose';
     }
@@ -49,7 +50,7 @@ function mergeFamilyNames(string $mainFamilyName,string $secondFamilyName) : str
     $gradient = "";
     $gradient .=  $mainFamily;
 
-    if($secondFamily != "none"){
+    if($secondFamily != "none" && $secondFamily!= null){
         $gradient = $gradient . "-" . $secondFamily;
     }
     return $gradient;

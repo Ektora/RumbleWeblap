@@ -3,6 +3,9 @@
 declare(strict_types=1);
 require_once dirname(__DIR__,2) . '/config.php';
 require_once PRIVATE_BASE_PATH. '/app/miniLoadHelper.php';
+
+$targetDir = BASE_PATH . '/assets/images/minis';
+
 ?>
 <html>
 
@@ -64,7 +67,13 @@ require_once PRIVATE_BASE_PATH. '/app/miniLoadHelper.php';
                                 <div class="col-5 col-sm-12 position-relative mini-list-stack">
                                     <img src="<?php echo $miniFamilies[mergeFamilyNames($mini['main-family'],$mini['second-family'])]['imageSrc'] ?>" class="mini-family-image position-absolute" alt="">
                                     <img src="<?php echo $miniTypes[$mini['type']]['imageSrc'] ?>" class="mini-type-image position-absolute" alt="">
+                                    <?php if (!is_file($targetDir . '/' . getName($mini['name']) . '.png')): ?>
+                                    <img src="/assets/images/minis/kobold.png" class="mini-list-image" alt="...">
+                                    <?php else: ?>
                                     <img src="/assets/images/minis/<?php echo getName($mini['name']) ?>.png" class="mini-list-image" alt="...">
+                                    <?php endif; ?>
+                                    
+                                    
                                     <img src="/assets/images/statue/<?php echo familyNameToStatueName($mini['main-family'],$mini['second-family']) ?>.png" class="mini-list-base d-none d-sm-inline position-absolute start-50 bottom-0 translate-middle-x" alt="...">
                                     <div class="mini-cost-container position-absolute">
                                         <img src="/assets/images/icons/gold.png" class="mini-cost-image" alt="...">
